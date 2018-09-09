@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@types/chrome": "^0.x.x",
+    "@types/superagent": "^3.8.4",
     "babel-cli": "6.x.x",
     "babel-core": "6.x.x",
     "babel-loader": "7.x.x",
@@ -52,6 +53,7 @@
     "gulp-zip": "^4.x.x",
     "require-dir": "0.x.x",
     "standard": "^10.0.2",
+    "superagent": "^3.8.3",
     "ts-loader": "^2.x.x",
     "tslint": "^5.x.x",
     "typescript": "^3.0.3",
