@@ -28,5 +28,6 @@ function loadSetting() {
     localStorage.setItem("issueType", res.body.issueType);
     localStorage.setItem("summary", res.body.summary);
     localStorage.setItem("description", res.body.description);
+    window.close();
   });
 }
