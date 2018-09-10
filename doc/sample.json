@@ -3,5 +3,6 @@
   "issuePrefix": "PKSH",
   "pid": 10008,
   "issueType": 10002,
-  "summary": "hoge\n\nmoge\n\nmuda"
+  "summary": "",
+  "description": "# description\n\n\n# author\n\n\n# URL\n\n\n"
 }
