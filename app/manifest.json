@@ -2,7 +2,7 @@
   "name": "jira_benri",
   "short_name": "jira_benri",
   "description": "Add some functions for Jira",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "default_locale": "en",
   "icons": {
