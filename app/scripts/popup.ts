@@ -1,5 +1,5 @@
 import "chromereload/devonly";
-import * as utils from "./Utils";
+import Utils from "./Utils";
 initialize();
 
 function initialize() {
@@ -21,7 +21,7 @@ function addNewIssue() {
         params[key] = localStorage.getItem(key)!;
     }
     
-    window.open(`https://${team}.atlassian.net/secure/CreateIssueDetails!init.jspa?${utils.Utils.toQueryParam(params)}`);
+    window.open(`https://${team}.atlassian.net/secure/CreateIssueDetails!init.jspa?${Utils.toQueryParam(params)}`);
 }
 
 function openIssue() {
