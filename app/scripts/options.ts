@@ -1,4 +1,3 @@
-import * as superagent from 'superagent';
 import Settings from "./Settings";
 
 initialize();
@@ -10,5 +9,8 @@ function initialize() {
         text.value = localStorage.getItem("url")!;
     }
     
-    document.getElementById("applyButton")!.addEventListener("click", () => { new Settings().loadSetting(url); });
+    document.getElementById("applyButton")!.addEventListener("click", () => { 
+        new Settings().loadSetting(url); 
+        //window.close();
+    });
 }

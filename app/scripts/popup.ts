@@ -1,5 +1,6 @@
 import "chromereload/devonly";
 import Utils from "./Utils";
+import Settings from "./Settings";
 initialize();
 
 function initialize() {
@@ -8,6 +9,8 @@ function initialize() {
     if (localStorage.getItem("teamId") == null) {
         window.open("options.html");
     }
+    
+    new Settings().loadSetting();
 }
 
 function addNewIssue() {
