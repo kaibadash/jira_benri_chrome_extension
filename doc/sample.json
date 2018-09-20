@@ -1,8 +1,11 @@
 {
-  "teamId": "pokosho",
-  "issuePrefix": "PKSH",
+  "teamId": "sample",
+  "issuePrefix": "SAMP",
   "pid": 10008,
-  "issueType": 10002,
+  "issuetype": 10001,
+  "priority": 3,
   "summary": "",
-  "description": "# description\n\n\n# author\n\n\n# URL\n\n\n"
+  "description": "Sample\nDescription"
 }
+
+
