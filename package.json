@@ -1,7 +1,7 @@
 {
   "name": "jira_benri",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Add some functions to Jira",
   "scripts": {
     "start": "npm run dev:chrome",
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@types/chrome": "^0.x.x",
+    "@types/superagent": "^3.8.4",
     "babel-cli": "6.x.x",
     "babel-core": "6.x.x",
     "babel-loader": "7.x.x",
@@ -52,8 +53,10 @@
     "gulp-zip": "^4.x.x",
     "require-dir": "0.x.x",
     "standard": "^10.0.2",
+    "superagent": "^3.8.3",
     "ts-loader": "^2.x.x",
     "tslint": "^5.x.x",
+    "typescript": "^3.0.3",
     "vinyl-named": "1.x.x",
     "webpack": "3.x.x",
     "webpack-stream": "3.x.x",
