@@ -1,18 +1,30 @@
-import 'chromereload/devonly';
-
+import "chromereload/devonly";
+import Utils from "./Utils";
+import Settings from "./Settings";
 initialize();
 
 function initialize() {
     document.getElementById("buttonAddNewIssue")!.addEventListener("click", addNewIssue);
     document.getElementById("buttonOpenIssue")!.addEventListener("click", openIssue);
+    if (localStorage.getItem("teamId") == null) {
+        window.open("options.html");
+    }
+    
+    new Settings().loadSetting();
 }
 
 function addNewIssue() {
     let team = localStorage.getItem("teamId")!;
-    let description = encodeURIComponent(localStorage.getItem("description")!);
-    let pid = localStorage.getItem("pid")!;
-    let issueType = localStorage.getItem("issueType")!;
-    window.open(`https://${team}.atlassian.net/secure/CreateIssueDetails!init.jspa?pid=${pid}&issuetype=${issueType}&description=${description}`);
+    let params: {[key: string]: any} = {};
+    for (let key in localStorage){
+        console.log(key);
+        if (localStorage.getItem(key) == null) {
+            continue;
+        }
+        params[key] = localStorage.getItem(key)!;
+    }
+    
+    window.open(`https://${team}.atlassian.net/secure/CreateIssueDetails!init.jspa?${Utils.toQueryParam(params)}`);
 }
 
 function openIssue() {
