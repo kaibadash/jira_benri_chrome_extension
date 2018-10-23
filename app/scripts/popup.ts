@@ -1,6 +1,8 @@
 import "chromereload/devonly";
 import Utils from "./Utils";
 import Settings from "./Settings";
+import * as moji from "moji";
+
 initialize();
 
 function initialize() {
@@ -31,5 +33,7 @@ function openIssue() {
     let no = window.prompt("Set number", "");
     let team = localStorage.getItem("teamId")!;
     let prefix = localStorage.getItem("issuePrefix")!;
+    if (!no) return;
+    no = moji(no!).convert('ZE', 'HE').toString().replace(/[^0-9^\.]/g, "");
     window.open(`https://${team}.atlassian.net/browse/${prefix}-${no}`);
 }
