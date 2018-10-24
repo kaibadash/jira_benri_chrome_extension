@@ -11,21 +11,21 @@ function initialize() {
     if (localStorage.getItem("teamId") == null) {
         window.open("options.html");
     }
-    
+
     new Settings().loadSetting();
 }
 
 function addNewIssue() {
     let team = localStorage.getItem("teamId")!;
     let params: {[key: string]: any} = {};
-    for (let key in localStorage){
+    for (let key in localStorage) {
         console.log(key);
         if (localStorage.getItem(key) == null) {
             continue;
         }
         params[key] = localStorage.getItem(key)!;
     }
-    
+
     window.open(`https://${team}.atlassian.net/secure/CreateIssueDetails!init.jspa?${Utils.toQueryParam(params)}`);
 }
 
