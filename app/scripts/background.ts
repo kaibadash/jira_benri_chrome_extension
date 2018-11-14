@@ -14,7 +14,6 @@ chrome.runtime.onMessage.addListener(
 );
 
 function saveToClipboard(str: string) {
-  console.log("save", str);
   let textArea = document.createElement("textarea");
   textArea.style.cssText = "position:absolute;left:-100%";
   document.body.appendChild(textArea);

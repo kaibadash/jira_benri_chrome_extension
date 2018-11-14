@@ -19,7 +19,6 @@ function addNewIssue() {
     let team = localStorage.getItem("teamId")!;
     let params: {[key: string]: any} = {};
     for (let key in localStorage) {
-        console.log(key);
         if (localStorage.getItem(key) == null) {
             continue;
         }

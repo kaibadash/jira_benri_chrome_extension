@@ -8,7 +8,6 @@ export default class Settings {
     }
 
     public loadSetting(url?: string) {
-        console.log("request to " + url);
         if (!url) {
             let u = localStorage.getItem("url");
             if (!u) {
@@ -26,7 +25,6 @@ export default class Settings {
                     return;
                 }
                 Object.keys(res.body).forEach((k: string) => {
-                    console.log(k, res.body[k]);
                     localStorage.setItem(k, res.body[k]);
                 });
                 localStorage.setItem("url", url!);
