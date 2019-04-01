@@ -17,7 +17,7 @@ export default class CopyButton {
     }
 
     protected text() {
-        let title = document.title.replace(/- Jira/, "").replace(/\[.+\]/, "");
+        let title = document.title.replace(/ - Jira/, "").replace(/\[.+\]/, "");
         return `https://${location.hostname}${location.pathname} ${title}`;
     }
 

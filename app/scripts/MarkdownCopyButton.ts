@@ -6,7 +6,7 @@ export default class MarkdownCopyButton extends CopyButton {
     }
 
     protected text() {
-        let title =  document.title.replace(/- Jira/, "").replace(/\[.+\]/, "");
+        let title = document.title.replace(/ - Jira/, "").replace(/\[.+\]/, "");
         return `[${title}](https://${location.hostname}${location.pathname})`;
     }
 }
