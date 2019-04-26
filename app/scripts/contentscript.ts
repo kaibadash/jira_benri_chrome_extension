@@ -8,7 +8,7 @@ window.addEventListener("load", addCopyButtons);
 function addCopyButtons() {
     if (location.pathname.includes("browse")) {
         [new CopyButton().createCopyButtonElement(), new MarkdownCopyButton().createCopyButtonElement()].forEach((b) => {
-            let dom = document.querySelectorAll("#jira-frontend button")[1];
+            let dom = document.querySelectorAll("async-bundle[data-id='async-spa-issue'] div[spacing='comfortable']")[0];
             dom.appendChild(b);
         });
         return;
