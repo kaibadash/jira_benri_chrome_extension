@@ -17,12 +17,14 @@ export default class CopyButton {
     }
 
     protected text() {
-        let title = document.title.replace(/- Jira/, "").replace(/\[.+\]/, "");
+        let title = document.title.replace(/ - Jira/, "").replace(/\[.+\]/, "").trim();
         return `https://${location.hostname}${location.pathname} ${title}`;
     }
 
-    private copy() {
+    protected copy(event: Event) {
         Toast.show("Copied: " + this.text());
         chrome.runtime.sendMessage({ text: this.text() });
+        event.stopImmediatePropagation();
+        return false;
     }
 }
